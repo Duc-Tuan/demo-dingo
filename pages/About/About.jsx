@@ -25,7 +25,7 @@ function Abouts() {
                       <h4>{data.suggestions}</h4>
                       <p>{data.content} </p>
                       <a href="#" className="btn_3">
-                        Read More <img src="img/icon/left_2.svg" alt="..." />
+                        Read More <img src="https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/left_1.svg" alt="..." />
                       </a>
                     </div>
                   </div>

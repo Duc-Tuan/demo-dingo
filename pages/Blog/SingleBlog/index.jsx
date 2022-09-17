@@ -1,39 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 import LayoutDefault from "../../../layouts/LayoutDefault";
+import { data_food_comment, data_food_post, data_food_recent_post } from "../../../public/data";
 
 function SingleBlog() {
   return (
     <LayoutDefault other={true} name="Blog Single">
-      <section class="blog_area single-post-area section_padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 posts-list">
-              <div class="single-post">
-                <div class="feature-img">
+      <section className="blog_area single-post-area section_padding">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 posts-list">
+              <div className="single-post">
+                <div className="feature-img">
                   <img
-                    class="img-fluid"
+                    className="img-fluid"
                     src="img/blog/single_blog_1.png"
                     alt="..."
                   />
                 </div>
-                <div class="blog_details">
+                <div className="blog_details">
                   <h2>
                     Second divided from form fish beast made every of seas all
                     gathered us saying he our
                   </h2>
-                  <ul class="blog-info-link mt-3 mb-4">
+                  <ul className="blog-info-link mt-3 mb-4">
                     <li>
                       <a href="#">
-                        <i class="far fa-user"></i> Travel, Lifestyle
+                        <i className="far fa-user"></i> Travel, Lifestyle
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="far fa-comments"></i> 03 Comments
+                        <i className="far fa-comments"></i> 03 Comments
                       </a>
                     </li>
                   </ul>
-                  <p class="excert">
+                  <p className="excert">
                     MCSE boot camps have its supporters and its detractors. Some
                     people do not understand why you should have to spend money
                     on boot camp when you can get the MCSE study materials
@@ -48,8 +49,8 @@ function SingleBlog() {
                     the willpower to actually sit through a self-imposed MCSE
                     training. who has the willpower to actually
                   </p>
-                  <div class="quote-wrapper">
-                    <div class="quotes">
+                  <div className="quote-wrapper">
+                    <div className="quotes">
                       MCSE boot camps have its supporters and its detractors.
                       Some people do not understand why you should have to spend
                       money on boot camp when you can get the MCSE study
@@ -75,80 +76,80 @@ function SingleBlog() {
                   </p>
                 </div>
               </div>
-              <div class="navigation-top">
-                <div class="d-sm-flex justify-content-between text-center">
-                  <p class="like-info">
-                    <span class="align-middle">
-                      <i class="far fa-heart"></i>
+              <div className="navigation-top">
+                <div className="d-sm-flex justify-content-between text-center">
+                  <p className="like-info">
+                    <span className="align-middle">
+                      <i className="far fa-heart"></i>
                     </span>{" "}
                     Lily and 4 people like this
                   </p>
-                  <div class="col-sm-4 text-center my-2 my-sm-0">
-                    {/* <p class="comment-count"><span class="align-middle"><i class="far fa-comment"></i></span> 06 Comments</p> */}
+                  <div className="col-sm-4 text-center my-2 my-sm-0">
+                    {/* <p className="comment-count"><span className="align-middle"><i className="far fa-comment"></i></span> 06 Comments</p> */}
                   </div>
-                  <ul class="social-icons">
+                  <ul className="social-icons">
                     <li>
                       <a href="#">
-                        <i class="fab fa-facebook-f"></i>
+                        <i className="fab fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-twitter"></i>
+                        <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-dribbble"></i>
+                        <i className="fab fa-dribbble"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-behance"></i>
+                        <i className="fab fa-behance"></i>
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="navigation-area">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                      <div class="thumb">
+                <div className="navigation-area">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                      <div className="thumb">
                         <a href="#">
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="img/post/preview.png"
                             alt="..."
                           />
                         </a>
                       </div>
-                      <div class="arrow">
+                      <div className="arrow">
                         <a href="#">
-                          <span class="lnr text-white ti-arrow-left"></span>
+                          <span className="lnr text-white ti-arrow-left"></span>
                         </a>
                       </div>
-                      <div class="detials">
+                      <div className="detials">
                         <p>Prev Post</p>
                         <a href="#">
                           <h4>Space The Final Frontier</h4>
                         </a>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                      <div class="detials">
+                    <div className="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                      <div className="detials">
                         <p>Next Post</p>
                         <a href="#">
                           <h4>Telescopes 101</h4>
                         </a>
                       </div>
-                      <div class="arrow">
+                      <div className="arrow">
                         <a href="#">
-                          <span class="lnr text-white ti-arrow-right"></span>
+                          <span className="lnr text-white ti-arrow-right"></span>
                         </a>
                       </div>
-                      <div class="thumb">
+                      <div className="thumb">
                         <a href="#">
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="img/post/next.png"
                             alt="..."
                           />
@@ -158,10 +159,10 @@ function SingleBlog() {
                   </div>
                 </div>
               </div>
-              <div class="blog-author">
-                <div class="media align-items-center">
+              <div className="blog-author">
+                <div className="media align-items-center">
                   <img src="img/blog/author.png" alt="..." />
-                  <div class="media-body">
+                  <div className="media-body">
                     <a href="#">
                       <h4>Harvard milan</h4>
                     </a>
@@ -173,111 +174,54 @@ function SingleBlog() {
                   </div>
                 </div>
               </div>
-              <div class="comments-area">
+              <div className="comments-area">
                 <h4>05 Comments</h4>
-                <div class="comment-list">
-                  <div class="single-comment justify-content-between d-flex">
-                    <div class="user justify-content-between d-flex">
-                      <div class="thumb">
-                        <img src="img/comment/comment_1.png" alt="..." />
-                      </div>
-                      <div class="desc">
-                        <p class="comment">
-                          Multiply sea night grass fourth day sea lesser rule
-                          open subdue female fill which them Blessed, give fill
-                          lesser bearing multiply sea night grass fourth day sea
-                          lesser
-                        </p>
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex align-items-center">
-                            <h5>
-                              <a href="#">Emilly Blunt</a>
-                            </h5>
-                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                          </div>
-                          <div class="reply-btn">
-                            <a href="#" class="btn-reply text-uppercase">
-                              reply
-                            </a>
+
+                {data_food_comment.map(data => {
+                  return (
+                  <div className="comment-list" key={data.id}>
+                    <div className="single-comment justify-content-between d-flex">
+                      <div className="user justify-content-between d-flex">
+                        <div className="thumb">
+                          <img src={data.imgSrc} alt="..." />
+                        </div>
+                        <div className="desc">
+                          <p className="comment">
+                            {data.content}
+                          </p>
+                          <div className="d-flex justify-content-between">
+                            <div className="d-flex align-items-center">
+                              <h5>
+                                <a href="#">{data.name}</a>
+                              </h5>
+                              <p className="date">{data.date}</p>
+                            </div>
+                            <div className="reply-btn">
+                              <a href="#" className="btn-reply text-uppercase">
+                                reply
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="comment-list">
-                  <div class="single-comment justify-content-between d-flex">
-                    <div class="user justify-content-between d-flex">
-                      <div class="thumb">
-                        <img src="img/comment/comment_2.png" alt="..." />
-                      </div>
-                      <div class="desc">
-                        <p class="comment">
-                          Multiply sea night grass fourth day sea lesser rule
-                          open subdue female fill which them Blessed, give fill
-                          lesser bearing multiply sea night grass fourth day sea
-                          lesser
-                        </p>
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex align-items-center">
-                            <h5>
-                              <a href="#">Emilly Blunt</a>
-                            </h5>
-                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                          </div>
-                          <div class="reply-btn">
-                            <a href="#" class="btn-reply text-uppercase">
-                              reply
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-list">
-                  <div class="single-comment justify-content-between d-flex">
-                    <div class="user justify-content-between d-flex">
-                      <div class="thumb">
-                        <img src="img/comment/comment_3.png" alt="..." />
-                      </div>
-                      <div class="desc">
-                        <p class="comment">
-                          Multiply sea night grass fourth day sea lesser rule
-                          open subdue female fill which them Blessed, give fill
-                          lesser bearing multiply sea night grass fourth day sea
-                          lesser
-                        </p>
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex align-items-center">
-                            <h5>
-                              <a href="#">Emilly Blunt</a>
-                            </h5>
-                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                          </div>
-                          <div class="reply-btn">
-                            <a href="#" class="btn-reply text-uppercase">
-                              reply
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+                  )
+                })}
               </div>
-              <div class="comment-form">
+              <div className="comment-form">
                 <h4>Leave a Reply</h4>
                 <form
-                  class="form-contact comment_form"
+                  className="form-contact comment_form"
                   action="#"
                   id="commentForm"
                 >
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
                         <textarea
-                          class="form-control w-100"
+                          className="form-control w-100"
                           name="comment"
                           id="comment"
                           cols="30"
@@ -286,10 +230,10 @@ function SingleBlog() {
                         ></textarea>
                       </div>
                     </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
+                    <div className="col-sm-6">
+                      <div className="form-group">
                         <input
-                          class="form-control"
+                          className="form-control"
                           name="name"
                           id="name"
                           type="text"
@@ -297,10 +241,10 @@ function SingleBlog() {
                         />
                       </div>
                     </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
+                    <div className="col-sm-6">
+                      <div className="form-group">
                         <input
-                          class="form-control"
+                          className="form-control"
                           name="email"
                           id="email"
                           type="email"
@@ -308,10 +252,10 @@ function SingleBlog() {
                         />
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="form-group">
+                    <div className="col-12">
+                      <div className="form-group">
                         <input
-                          class="form-control"
+                          className="form-control"
                           name="website"
                           id="website"
                           type="text"
@@ -320,123 +264,103 @@ function SingleBlog() {
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <button type="submit" class="button button-contactForm">
+                  <div className="form-group">
+                    <button type="submit" className="button button-contactForm">
                       Send Message
                     </button>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="blog_right_sidebar">
-                <aside class="single_sidebar_widget search_widget">
+            <div className="col-lg-4">
+              <div className="blog_right_sidebar">
+                <aside className="single_sidebar_widget search_widget">
                   <form action="#">
-                    <div class="form-group">
-                      <div class="input-group mb-3">
+                    <div className="form-group">
+                      <div className="input-group mb-3">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           placeholder="Search Keyword"
                         />
-                        <div class="input-group-append">
-                          <button class="btn" type="button">
-                            <i class="ti-search"></i>
+                        <div className="input-group-append">
+                          <button className="btn" type="button">
+                            <i className="ti-search"></i>
                           </button>
                         </div>
                       </div>
                     </div>
                     <button
-                      class="button rounded-0 primary-bg text-white w-100 btn_4"
+                      className="button rounded-0 primary-bg text-white w-100 btn_4"
                       type="submit"
                     >
                       Search
                     </button>
                   </form>
                 </aside>
-                <aside class="single_sidebar_widget post_category_widget">
-                  <h4 class="widget_title">Category</h4>
-                  <ul class="list cat-list">
+                <aside className="single_sidebar_widget post_category_widget">
+                  <h4 className="widget_title">Category</h4>
+                  <ul className="list cat-list">
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Resaurant food</p>
                         <p>(37)</p>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Travel news</p>
                         <p>(10)</p>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Modern technology</p>
                         <p>(03)</p>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Product</p>
                         <p>(11)</p>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Inspiration</p>
                         <p>(21)</p>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="d-flex">
+                      <a href="#" className="d-flex">
                         <p>Health Care</p>
                         <p>(21)</p>
                       </a>
                     </li>
                   </ul>
                 </aside>
-                <aside class="single_sidebar_widget popular_post_widget">
-                  <h3 class="widget_title">Recent Post</h3>
-                  <div class="media post_item">
-                    <img src="img/post/post_1.png" alt="post" />
-                    <div class="media-body">
+
+                <aside className="single_sidebar_widget popular_post_widget">
+                  <h3 className="widget_title">Recent Post</h3>
+
+                  {data_food_recent_post.map(data => {
+                    return (
+                      <div className="media post_item" key={data.id}>
+                    <img src={data.imgSrc} alt="post" />
+                    <div className="media-body">
                       <a href="single-blog.html">
-                        <h3>From life was you fish...</h3>
+                        <h3>{data.describe}</h3>
                       </a>
-                      <p>January 12, 2019</p>
+                      <p>{data.date}</p>
                     </div>
                   </div>
-                  <div class="media post_item">
-                    <img src="img/post/post_2.png" alt="post" />
-                    <div class="media-body">
-                      <a href="single-blog.html">
-                        <h3>The Amazing Hubble</h3>
-                      </a>
-                      <p>02 Hours ago</p>
-                    </div>
-                  </div>
-                  <div class="media post_item">
-                    <img src="img/post/post_3.png" alt="post" />
-                    <div class="media-body">
-                      <a href="single-blog.html">
-                        <h3>Astronomy Or Astrology</h3>
-                      </a>
-                      <p>03 Hours ago</p>
-                    </div>
-                  </div>
-                  <div class="media post_item">
-                    <img src="img/post/post_4.png" alt="post" />
-                    <div class="media-body">
-                      <a href="single-blog.html">
-                        <h3>Asteroids telescope</h3>
-                      </a>
-                      <p>01 Hours ago</p>
-                    </div>
-                  </div>
+                    )
+                  })}
                 </aside>
-                <aside class="single_sidebar_widget tag_cloud_widget">
-                  <h4 class="widget_title">Tag Clouds</h4>
-                  <ul class="list">
+
+                <aside className="single_sidebar_widget tag_cloud_widget">
+                  <h4 className="widget_title">Tag Clouds</h4>
+                  <ul className="list">
                     <li>
                       <a href="#">project</a>
                     </li>
@@ -463,78 +387,40 @@ function SingleBlog() {
                     </li>
                   </ul>
                 </aside>
-                <aside class="single_sidebar_widget instagram_feeds">
-                  <h4 class="widget_title">Instagram Feeds</h4>
-                  <ul class="instagram_row flex-wrap">
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_5.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_6.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_7.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_8.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_9.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          class="img-fluid"
-                          src="img/post/post_10.png"
-                          alt="..."
-                        />
-                      </a>
-                    </li>
+
+                <aside className="single_sidebar_widget instagram_feeds">
+                  <h4 className="widget_title">Instagram Feeds</h4>
+                  <ul className="instagram_row flex-wrap">
+                    {data_food_post.map(data => {
+                      return (
+                        <li key={data.id}>
+                          <a href="#">
+                            <img
+                              width={'100%'}
+                              className="img-fluid"
+                              src={data.imgSrc}
+                              alt="..."
+                            />
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </aside>
-                <aside class="single_sidebar_widget newsletter_widget">
-                  <h4 class="widget_title">Newsletter</h4>
+
+                <aside className="single_sidebar_widget newsletter_widget">
+                  <h4 className="widget_title">Newsletter</h4>
                   <form action="#">
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Enter email"
                         required
                       />
                     </div>
                     <button
-                      class="button rounded-0 primary-bg text-white w-100 btn_4"
+                      className="button rounded-0 primary-bg text-white w-100 btn_4"
                       type="submit"
                     >
                       Subscribe

@@ -32,7 +32,7 @@ function Feedback() {
                   return (
                     <Fragment key={data.id}>
                       <div className="row">
-                        <div className="col-xl-2 dfcenter">
+                        <div className="col-xl-2 col-lg-2 col-sm-2 dfcenter">
                             <img width="80%" src={data.imgSrc} alt="..." />
                         </div>
                         <div className="col-xl-10">

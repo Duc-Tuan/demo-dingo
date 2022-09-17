@@ -40,19 +40,19 @@ function Menu_food() {
 
   useEffect(() => {
     {
-      const menuLi = document.querySelectorAll('#menu_food');
+      const menuBtn = document.querySelectorAll('#menu_food');
 
       function setMenuAcitve() {
-        menuLi.forEach((n) => n.classList.remove('active'));
+        menuBtn.forEach((n) => n.classList.remove('active'));
         this.classList.add('active');
       }
 
-      menuLi.forEach((n) => n.addEventListener('click', setMenuAcitve));
+      menuBtn.forEach((n) => n.addEventListener('click', setMenuAcitve));
     }
   },[isMenu]);
 
-  const setData = (id) => {
-    setIsMenu(data_food_menus.filter(item => item.category === id));
+  const setData = (category) => {
+    setIsMenu(data_food_menus.filter(item => item.category === category));
   }
 
   return (
@@ -102,7 +102,9 @@ function Menu_food() {
                     {isMenu.map((data) => {
                       return (
                         <div className="single_food_item" key={data.id}>
-                          <img src={data.imgSrc} className="mr-3" alt="..." />
+                          <div className="mr-3" style={{width: '200px'}}>
+                            <img width="100%" src={data.imgSrc} alt="..." />
+                          </div>
                           <div className="media-body align-self-center">
                             <h3>{data.name}</h3>
                             <p>{data.describe}</p>

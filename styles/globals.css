@@ -2,6 +2,9 @@
 #navbarSupportedContent.show {
   box-shadow: 1px 1px 10px rgb(234, 233, 233);
 }
+.blog-pagination .page-item.active .page-link{
+  border-color: #ff6426 !important;
+}
 body::-webkit-scrollbar{
   display: none;
 }
@@ -3021,6 +3024,7 @@ ul {
 
 @media (max-width: 576px) {
   .food_menu .single_food_item {
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
     padding: 10px;
@@ -3029,6 +3033,7 @@ ul {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .food_menu .single_food_item {
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
     padding: 10px;
@@ -3038,6 +3043,7 @@ ul {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .food_menu .single_food_item {
     flex-wrap: wrap;
+    justify-content:center;
     margin-bottom: 20px;
     padding: 10px;
   }
@@ -3087,6 +3093,7 @@ ul {
 }
 
 .food_menu .single_food_item .media-body {
+  width: 300px;
   padding-left: 26px;
 }
 

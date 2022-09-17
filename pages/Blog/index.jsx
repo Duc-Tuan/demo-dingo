@@ -2,13 +2,31 @@
 import { faLeftLong, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LayoutDefault from "../../layouts/LayoutDefault";
+import ReactPaginate from "react-paginate";
 import {
   data_food_post,
   data_food_recent_post,
   data_food_singlw_blog,
 } from "../../public/data";
+import { useEffect, useState } from "react";
 
 function Blog() {
+  const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 4;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(data_food_singlw_blog.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(data_food_singlw_blog.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage]);
+
+  const handlePageClick = (event) => {
+    const newOffset =
+      (event.selected * itemsPerPage) % data_food_singlw_blog.length;
+    setItemOffset(newOffset);
+  };
   return (
     <LayoutDefault other={true} name="Our Blog">
       <section className="blog_area section_padding">
@@ -16,68 +34,65 @@ function Blog() {
           <div className="row">
             <div className="col-lg-8 mb-5 mb-lg-0">
               <div className="blog_left_sidebar">
-                {data_food_singlw_blog.map((data) => {
-                  return (
-                    <article className="blog_item" key={data.id}>
-                      <div className="blog_item_img">
-                        <img
-                          className="card-img rounded-0"
-                          src={data.imgSrc}
-                          alt="..."
-                        />
-                        <a href="#" className="blog_item_date">
-                          <h3>{data.day}</h3>
-                          <p>{data.month}</p>
-                        </a>
-                      </div>
+                {currentItems &&
+                  currentItems.map((data) => {
+                    return (
+                      <article className="blog_item" key={data.id}>
+                        <div className="blog_item_img">
+                          <img
+                            className="card-img rounded-0"
+                            src={data.imgSrc}
+                            alt="..."
+                          />
+                          <a href="#" className="blog_item_date">
+                            <h3>{data.day}</h3>
+                            <p>{data.month}</p>
+                          </a>
+                        </div>
 
-                      <div className="blog_details">
-                        <a className="d-inline-block" href="single-blog.html">
-                          <h2>{data.title}</h2>
-                        </a>
-                        <p>{data.content}</p>
-                        <ul className="blog-info-link">
-                          <li>
-                            <a href="#">
-                              <i className="far fa-user"></i> {data.info}
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <i className="far fa-comments"></i>{" "}
-                              {data.numberComment} Comments
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                  );
-                })}
+                        <div className="blog_details">
+                          <a className="d-inline-block" href="single-blog.html">
+                            <h2>{data.title}</h2>
+                          </a>
+                          <p>{data.content}</p>
+                          <ul className="blog-info-link">
+                            <li>
+                              <a href="#">
+                                <i className="far fa-user"></i> {data.info}
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <i className="far fa-comments"></i>{" "}
+                                {data.numberComment} Comments
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    );
+                  })}
 
                 <nav className="blog-pagination justify-content-center d-flex">
-                  <ul className="pagination">
-                    <li className="page-item">
-                      <a href="#" className="page-link" aria-label="Previous">
-                        <i className="ti-angle-left"></i>
-                        <FontAwesomeIcon icon={faLeftLong} />
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a href="#" className="page-link">
-                        1
-                      </a>
-                    </li>
-                    <li className="page-item active">
-                      <a href="#" className="page-link">
-                        2
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a href="#" className="page-link" aria-label="Next">
-                        <i className="ti-angle-right"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  <ReactPaginate
+                    breakLabel="..."
+                    nextLabel=">>"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={2}
+                    pageCount={pageCount}
+                    previousLabel="<<"
+                    renderOnZeroPageCount={null}
+                    containerClassName={"pagination justify-content-center"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active"}
+                  />
                 </nav>
               </div>
             </div>

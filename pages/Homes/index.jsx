@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from "react";
 import Feedback from "../../components/Feedback";
 import Intro_video_bg from "../../components/Intro_video_bg";
 import Menu_food from "../../components/Menu_food";
 import Teams from "../../components/Teams";
+import { data_food_menus } from "../../public/data";
 
 function Homes() {
+  const [outstanding, setOutstanding] = useState(data_food_menus.filter((item) => item.outstanding === 'yes'));
   return (
     <>
       <section className="exclusive_item_part blog_item_section">
@@ -18,74 +21,27 @@ function Homes() {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-6 col-lg-4">
-              <div className="single_blog_item">
-                <div className="single_blog_img">
-                  <img src="/images/food_item/food_item_1.png" alt="..." />
+
+            {outstanding.map(data=> {
+              return (
+                <div className="col-sm-6 col-lg-4" key={data.id}>
+                  <div className="single_blog_item">
+                    <div className="single_blog_img">
+                      <img src={data.imgSrc} alt="..." />
+                    </div>
+                    <div className="single_blog_text">
+                      <h3>{data.name}</h3>
+                      <p>
+                        {data.describe}
+                      </p>
+                      <a href="#" className="btn_3">
+                        Read More <img src="/images/icon/left_2.svg" alt="..." />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="single_blog_text">
-                  <h3>Indian Burger</h3>
-                  <p>
-                    Was brean shed moveth day yielding tree yielding day were
-                    female and{" "}
-                  </p>
-                  <a href="#" className="btn_3">
-                    Read More <img src="/images/icon/left_2.svg" alt="..." />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4">
-              <div className="single_blog_item">
-                <div className="single_blog_img">
-                  <img src="/images/food_item/food_item_2.png" alt="..." />
-                </div>
-                <div className="single_blog_text">
-                  <h3>Cremy Noodles</h3>
-                  <p>
-                    Was brean shed moveth day yielding tree yielding day were
-                    female and{" "}
-                  </p>
-                  <a href="#" className="btn_3">
-                    Read More <img src="/images/icon/left_2.svg" alt="..." />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4">
-              <div className="single_blog_item">
-                <div className="single_blog_img">
-                  <img src="/images/food_item/food_item_3.png" alt="..." />
-                </div>
-                <div className="single_blog_text">
-                  <h3>Honey Meat</h3>
-                  <p>
-                    Was brean shed moveth day yielding tree yielding day were
-                    female and{" "}
-                  </p>
-                  <a href="#" className="btn_3">
-                    Read More <img src="/images/icon/left_2.svg" alt="..." />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 d-none d-sm-block d-lg-none">
-              <div className="single_blog_item">
-                <div className="single_blog_img">
-                  <img src="/images/food_item/food_item_1.png" alt="..." />
-                </div>
-                <div className="single_blog_text">
-                  <h3>Cremy Noodles</h3>
-                  <p>
-                    Was brean shed moveth day yielding tree yielding day were
-                    female and{" "}
-                  </p>
-                  <a href="#" className="btn_3">
-                    Read More <img src="/images/icon/left_2.svg" alt="..." />
-                  </a>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
