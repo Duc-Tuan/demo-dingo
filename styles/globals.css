@@ -2,6 +2,18 @@
 #navbarSupportedContent.show {
   box-shadow: 1px 1px 10px rgb(234, 233, 233);
 }
+body::-webkit-scrollbar{
+  display: none;
+}
+a{
+  cursor: pointer;
+}
+.food_menu--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .media.post_item {
   display: flex;
   flex-wrap: wrap;
@@ -3000,6 +3012,8 @@ ul {
 }
 
 .food_menu .single_food_item {
+  overflow: hidden;
+  flex: 0 0 48%;
   display: flex;
   margin-bottom: 50px;
   background-color: #fff;
@@ -6407,4 +6421,10 @@ h6 {
 .footer-area .copyright_social_icon a {
   margin-left: 20px;
   color: #969697;
+}
+
+@media (max-width: 480px) {
+  .food_menu .single_food_item{
+    flex: 0 0 100%;
+  }
 }

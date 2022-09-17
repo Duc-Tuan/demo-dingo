@@ -68,7 +68,7 @@ export const data_chefs_food = [
 export const data_food_menus = [
     {
         id: 1,
-        category: "special",
+        category: "Special",
         name: "Pork Sandwich",
         describe: "They're wherein heaven seed hath nothing",
         content: "",
@@ -77,7 +77,7 @@ export const data_food_menus = [
     },
     {
         id: 2,
-        category: "special",
+        category: "Special",
         name: "Easter Delight",
         describe: "They're wherein heaven seed hath nothing",
         content: "",
@@ -86,7 +86,7 @@ export const data_food_menus = [
     },
     {
         id: 3,
-        category: "special",
+        category: "Special",
         name: "Roasted Marrow",
         describe: "They're wherein heaven seed hath nothing",
         content: "",
