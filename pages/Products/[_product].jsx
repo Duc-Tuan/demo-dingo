@@ -8,26 +8,25 @@ import Button from "../../components/Button";
 import { data_food_menus, data_food_comment } from "../../public/data";
 
 function Product() {
+  var itemId = 0;
+  data.map((n) => {
+    return (itemId = n.id);
+  });
   const router = useRouter();
   const { _product } = router.query;
   const [data, setData] = useState(
     data_food_menus.filter((item) => item.id === parseInt(_product))
   );
-  var itemId = 0;
-  data.map((n) => {
-    return (itemId = n.id);
-  });
   const [comment, setComment] = useState(
     data_food_comment.filter((comment) => comment.itemId === itemId)
   );
-
+  
   useEffect(() => {
     setComment(
       data_food_comment.filter((comment) => comment.itemId === itemId)
     );
     setData(data_food_menus.filter((item) => item.id === parseInt(_product)));
   }, [_product]);
-  console.log(comment);
 
   return (
     <Products
