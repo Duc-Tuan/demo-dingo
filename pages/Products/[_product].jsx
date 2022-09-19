@@ -27,7 +27,7 @@ function Product() {
     );
     setData(data_food_menus.filter((item) => item.id === parseInt(_product)));
   }, [_product]);
-
+  
   return (
     <Products
       name={`Name of food: ${data.map((n) => {
