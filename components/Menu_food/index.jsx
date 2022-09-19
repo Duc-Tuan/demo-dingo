@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { data_food_menus } from "../../public/data";
 
@@ -36,24 +37,26 @@ const menuName = [
 ];
 
 function Menu_food() {
-  const [isMenu, setIsMenu] = useState(data_food_menus.filter(item => item.category === "Special"));
+  const [isMenu, setIsMenu] = useState(
+    data_food_menus.filter((item) => item.category === "Special")
+  );
 
   useEffect(() => {
     {
-      const menuBtn = document.querySelectorAll('#menu_food');
+      const menuBtn = document.querySelectorAll("#menu_food");
 
       function setMenuAcitve() {
-        menuBtn.forEach((n) => n.classList.remove('active'));
-        this.classList.add('active');
+        menuBtn.forEach((n) => n.classList.remove("active"));
+        this.classList.add("active");
       }
 
-      menuBtn.forEach((n) => n.addEventListener('click', setMenuAcitve));
+      menuBtn.forEach((n) => n.addEventListener("click", setMenuAcitve));
     }
-  },[isMenu]);
+  }, [isMenu]);
 
   const setData = (category) => {
-    setIsMenu(data_food_menus.filter(item => item.category === category));
-  }
+    setIsMenu(data_food_menus.filter((item) => item.category === category));
+  };
 
   return (
     <>
@@ -76,7 +79,7 @@ function Menu_food() {
                 {menuName.map((data) => {
                   return (
                     <a
-                      className={data.name === "Special" ? 'active' : ''}
+                      className={data.name === "Special" ? "active" : ""}
                       key={data.id}
                       onClick={(e) => {
                         setData(data.name);
@@ -101,16 +104,18 @@ function Menu_food() {
                   <div className="food_menu--content">
                     {isMenu.map((data) => {
                       return (
-                        <div className="single_food_item" key={data.id}>
-                          <div className="mr-3" style={{width: '200px'}}>
-                            <img width="100%" src={data.imgSrc} alt="..." />
+                        <Link href={`/Products/${data.id}`} key={data.id}>
+                          <div className="single_food_item">
+                            <div className="mr-3" style={{ width: "200px" }}>
+                              <img width="100%" src={data.imgSrc} alt="..." />
+                            </div>
+                            <div className="media-body align-self-center">
+                              <h3>{data.name}</h3>
+                              <p>{data.describe}</p>
+                              <h5>${data.price}</h5>
+                            </div>
                           </div>
-                          <div className="media-body align-self-center">
-                            <h3>{data.name}</h3>
-                            <p>{data.describe}</p>
-                            <h5>${data.price}</h5>
-                          </div>
-                        </div>
+                        </Link>
                       );
                     })}
                   </div>

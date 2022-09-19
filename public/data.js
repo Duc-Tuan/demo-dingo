@@ -75,7 +75,8 @@ export const data_food_menus = [
     category: "Special",
     name: "Pork Sandwich",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 1",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_1.png",
@@ -86,7 +87,8 @@ export const data_food_menus = [
     category: "Special",
     name: "Easter Delight",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 2",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_2.png",
@@ -97,7 +99,8 @@ export const data_food_menus = [
     category: "Special",
     name: "Roasted Marrow",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 3",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_3.png",
@@ -108,7 +111,8 @@ export const data_food_menus = [
     category: "Sneaks",
     name: "Summer Cooking",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 4",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_4.png",
@@ -119,7 +123,8 @@ export const data_food_menus = [
     category: "Sneaks",
     name: "Tiener Schnitze",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 5",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_5.png",
@@ -130,7 +135,8 @@ export const data_food_menus = [
     category: "Sneaks",
     name: "Chicken Roast",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 6",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_6.png",
@@ -141,7 +147,8 @@ export const data_food_menus = [
     category: "Dinner",
     name: "Tiener Schnitze 1",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 7",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_5.png",
@@ -152,7 +159,8 @@ export const data_food_menus = [
     category: "Dinner",
     name: "Tiener Schnitze 2",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 8",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_5.png",
@@ -163,7 +171,8 @@ export const data_food_menus = [
     category: "Dinner",
     name: "Tiener Schnitze 3",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 9",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_5.png",
@@ -174,7 +183,8 @@ export const data_food_menus = [
     category: "Launch",
     name: "Summer Cooking 1",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 10",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_4.png",
@@ -185,7 +195,8 @@ export const data_food_menus = [
     category: "Launch",
     name: "Summer Cooking 2",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 11",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_4.png",
@@ -196,7 +207,8 @@ export const data_food_menus = [
     category: "Launch",
     name: "Summer Cooking 3",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 12",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_4.png",
@@ -207,7 +219,8 @@ export const data_food_menus = [
     category: "Breakfast",
     name: "Easter Delight 1",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 13",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_2.png",
@@ -218,7 +231,8 @@ export const data_food_menus = [
     category: "Breakfast",
     name: "Easter Delight 2",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 14",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_2.png",
@@ -229,7 +243,8 @@ export const data_food_menus = [
     category: "Breakfast",
     name: "Easter Delight 3",
     describe: "They're wherein heaven seed hath nothing",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 15",
     price: "40.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_menu/single_food_2.png",
@@ -241,7 +256,8 @@ export const data_food_menus = [
     category: "Breakfast",
     describe:
       "Was brean shed moveth day yielding tree yielding day were female and",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 16",
     price: "20.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_item/food_item_1.png",
@@ -253,7 +269,8 @@ export const data_food_menus = [
     category: "Special",
     describe:
       "Was brean shed moveth day yielding tree yielding day were female and",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 17",
     price: "10.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_item/food_item_2.png",
@@ -265,7 +282,8 @@ export const data_food_menus = [
     category: "Special",
     describe:
       "Was brean shed moveth day yielding tree yielding day were female and",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 18",
     price: "15.00",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_item/food_item_3.png",
@@ -277,7 +295,8 @@ export const data_food_menus = [
     category: "Dinner",
     describe:
       "Was brean shed moveth day yielding tree yielding day were female and",
-    content: "",
+    content: "abcdc",
+    author:"Đức Tuấn 19",
     price: "17.50",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/food_item/food_item_1.png",
@@ -288,6 +307,7 @@ export const data_food_menus = [
 export const data_food_comment = [
   {
     id: 1,
+    itemId: 1,
     name: "Mosan Cameron",
     career: "Executive of fedex",
     date: "December 4, 2017 at 3:12 pm",
@@ -298,6 +318,7 @@ export const data_food_comment = [
   },
   {
     id: 2,
+    itemId: 1,
     name: "Mosan Cameron 2",
     career: "Executive of fedex 2",
     date: "December 4, 2017 at 3:12 pm",
@@ -308,7 +329,85 @@ export const data_food_comment = [
   },
   {
     id: 3,
+    itemId: 1,
     name: "Mosan Cameron 3",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 4,
+    itemId: 2,
+    name: "Mosan Cameron 4",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 5,
+    itemId: 2,
+    name: "Mosan Cameron 5",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 6,
+    itemId: 3,
+    name: "Mosan Cameron 6",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 7,
+    itemId: 4,
+    name: "Mosan Cameron 7",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 8,
+    itemId: 4,
+    name: "Mosan Cameron 8",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 9,
+    itemId: 8,
+    name: "Mosan Cameron 9",
+    career: "Executive of fedex 3",
+    date: "December 4, 2017 at 3:12 pm",
+    content:
+      "Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser",
+    imgSrc:
+      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/comment/comment_3.png",
+  },
+  {
+    id: 10,
+    itemId: 8,
+    name: "Mosan Cameron 10",
     career: "Executive of fedex 3",
     date: "December 4, 2017 at 3:12 pm",
     content:
@@ -398,7 +497,7 @@ export const data_food_recent_post = [
   {
     id: 1,
     describe: "From life was you fish...",
-    content: "",
+    content: "abcdc",
     date: "January 12, 2019",
     imgSrc:
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/post/post_1.png",

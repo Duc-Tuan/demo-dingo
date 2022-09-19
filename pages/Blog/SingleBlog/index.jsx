@@ -13,7 +13,7 @@ function SingleBlog() {
                 <div className="feature-img">
                   <img
                     className="img-fluid"
-                    src="img/blog/single_blog_1.png"
+                    src="/images/blog/single_blog_1.png"
                     alt="..."
                   />
                 </div>
@@ -117,7 +117,7 @@ function SingleBlog() {
                         <a href="#">
                           <img
                             className="img-fluid"
-                            src="img/post/preview.png"
+                            src="/images/post/preview.png"
                             alt="..."
                           />
                         </a>
@@ -150,7 +150,7 @@ function SingleBlog() {
                         <a href="#">
                           <img
                             className="img-fluid"
-                            src="img/post/next.png"
+                            src="/images/post/next.png"
                             alt="..."
                           />
                         </a>
@@ -161,7 +161,7 @@ function SingleBlog() {
               </div>
               <div className="blog-author">
                 <div className="media align-items-center">
-                  <img src="img/blog/author.png" alt="..." />
+                  <img src="/images/blog/author.png" alt="..." />
                   <div className="media-body">
                     <a href="#">
                       <h4>Harvard milan</h4>

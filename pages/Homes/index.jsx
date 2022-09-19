@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Feedback from "../../components/Feedback";
 import Intro_video_bg from "../../components/Intro_video_bg";
 import Menu_food from "../../components/Menu_food";
@@ -7,7 +8,9 @@ import Teams from "../../components/Teams";
 import { data_food_menus } from "../../public/data";
 
 function Homes() {
-  const [outstanding, setOutstanding] = useState(data_food_menus.filter((item) => item.outstanding === 'yes'));
+  const [outstanding, setOutstanding] = useState(
+    data_food_menus.filter((item) => item.outstanding === "yes")
+  );
   return (
     <>
       <section className="exclusive_item_part blog_item_section">
@@ -21,24 +24,24 @@ function Homes() {
             </div>
           </div>
           <div className="row">
-
-            {outstanding.map(data=> {
+            {outstanding.map((data) => {
               return (
                 <div className="col-sm-6 col-lg-4" key={data.id}>
-                  <div className="single_blog_item">
-                    <div className="single_blog_img">
-                      <img src={data.imgSrc} alt="..." />
+                  <Link href={`/Products/${data.id}`}>
+                    <div className="single_blog_item">
+                      <div className="single_blog_img">
+                        <img src={data.imgSrc} alt="..." />
+                      </div>
+                      <div className="single_blog_text">
+                        <h3>{data.name}</h3>
+                        <p>{data.describe}</p>
+                        <a href="#" className="btn_3">
+                          Read More{" "}
+                          <img src="/images/icon/left_2.svg" alt="..." />
+                        </a>
+                      </div>
                     </div>
-                    <div className="single_blog_text">
-                      <h3>{data.name}</h3>
-                      <p>
-                        {data.describe}
-                      </p>
-                      <a href="#" className="btn_3">
-                        Read More <img src="/images/icon/left_2.svg" alt="..." />
-                      </a>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               );
             })}

@@ -4,9 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.css";
 
+import { StateProvider } from "../hook/StateProvider";
+import reducer, { initialState } from "../hook/Reducer";
+
 function MyApp({ Component, pageProps }) {
-  
-  return <Component {...pageProps} />;
+  return (
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <Component {...pageProps} />
+    </StateProvider>
+  );
 }
 
 export default MyApp;
