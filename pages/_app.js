@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 import { StateProvider } from "../hook/StateProvider";
-import reducer, { initialState } from "../hook/reducer";
+import reducer, { initialState } from "../hook/Reducer";
 
 function MyApp({ Component, pageProps }) {
   return (
