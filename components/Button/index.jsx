@@ -1,4 +1,4 @@
-function Button({ children, className, icons, hrefs, onclick }) {
+function Button({ children, className, icons, hrefs, onClick }) {
 
   let Btn = "a";
 
@@ -7,7 +7,7 @@ function Button({ children, className, icons, hrefs, onclick }) {
   }
 
   return (
-    <Btn href="#" className={className} onClick={onclick}>
+    <Btn href="#" className={className} onClick={onClick}>
       {children}
     </Btn>
   );

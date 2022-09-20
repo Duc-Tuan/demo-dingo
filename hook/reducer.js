@@ -1,6 +1,6 @@
 export const initialState = {
-  cart: null,
-  total: null,
+  cart: [],
+  total: 0,
 };
 
 export const actionType = {
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
     case actionType.SET_CART:
       return {
         ...state,
-        cart: action.cart,
+        cart: [...state.cart,action.cart],
       };
 
     case actionType.SET_TOTAL:

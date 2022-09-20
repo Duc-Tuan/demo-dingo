@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import Menu from "../../../components/Menu_navbar";
 import { routers } from "../../../router/index";
@@ -7,16 +7,17 @@ import $ from "jquery";
 import Link from "next/link";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import { faBars, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import Cart from "../../../components/Carts";
+import Tippy from "@tippyjs/react/headless";
 
 function Header({ other }) {
-  
+  // const [show, setShow] = useState();
   useEffect(() => {
     const auto = () => {
-      $(".main_menu").css("background", "white")
-      $(".menu_btn a").css("border", "2px solid #ff6426")
-    }
+      $(".main_menu").css("background", "white");
+      $(".menu_btn a").css("border", "2px solid #ff6426");
+    };
 
     other && auto();
 
@@ -42,7 +43,6 @@ function Header({ other }) {
   const handleClick = () => {
     document.querySelector("#navbarSupportedContent").classList.toggle("show");
   };
-
   return (
     <>
       <Head>
@@ -65,7 +65,7 @@ function Header({ other }) {
                   </a>
                 </Link>
 
-                <Button onclick={handleClick} className={"navbar-toggler"}>
+                <Button onClick={handleClick} className={"navbar-toggler"}>
                   <FontAwesomeIcon icon={faBars} />
                 </Button>
 
@@ -88,6 +88,22 @@ function Header({ other }) {
                     })}
                   </ul>
                 </div>
+                <Tippy
+                  offset={[0, 25]}
+                  interactive
+                  placement="bottom-end"
+                  render={(attrs) => (
+                    <div className="content_cart" tabIndex="-1" {...attrs}>
+                        <Cart />
+                    </div>
+                  )}
+                >
+                  <div >
+                    <Button className={"btn_cart"}>
+                      <FontAwesomeIcon icon={faCartPlus} />
+                    </Button>
+                  </div>
+                </Tippy>
                 <div className="menu_btn">
                   <Button hrefs className={"btn_1 d-none d-sm-block"}>
                     book a tabel

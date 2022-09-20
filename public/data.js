@@ -718,3 +718,18 @@ export const data_food_country = [
       "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/main/elements/f8.jpg",
   },
 ];
+
+export const data_food_commit = [
+  {
+    id: 1,
+    content: "Free global shipping on all orders"
+  },
+  {
+    id: 2,
+    content: "30 days easy returns if you change your mind"
+  },
+  {
+    id: 3,
+    content: "Order before noon for same day dispatch"
+  },
+]
