@@ -21,7 +21,7 @@
   transition: 0.5s;
 }
 .menu_cart--content{
-  height: 386px;
+  height: 377px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -34,7 +34,7 @@
   border-radius: 4px;
 }
 .menu_car--img{
-  width: 14%;
+  width: 28%;
   justify-content: flex-start !important;
 }
 .menu_car--img img {
@@ -76,9 +76,8 @@
   flex-direction: column;
 }
 .content_cart{
-  width: 800px;
-  /* height: 50vh; */
-  max-width: 800px;
+  width: 500px;
+  max-width: 500px;
   max-height: 100vh;
   background-color: rgba(142, 142, 142, 0.9);
 }

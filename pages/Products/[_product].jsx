@@ -10,26 +10,25 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Products from ".";
 import Button from "../../components/Button";
-import Cart from "../../components/Carts";
 import RelatedDishes from "../../components/RelatedDishes";
-import { actionType } from "../../hook/Reducer";
-import { useStateValue } from "../../hook/StateProvider";
 import {
   data_food_menus,
   data_food_comment,
   data_food_commit,
 } from "../../public/data";
+import { actions, useStore } from "../../Store";
 
 function Product() {
   const router = useRouter();
   const { _product } = router.query;
+
+  // useState()
   const [quty, setQuty] = useState(1);
   const [datas, setDatas] = useState(
     data_food_menus.filter((item) => item.id === parseInt(_product))
   );
   const [priceCart, setPriceCart] = useState(datas.map((n) => n.price));
-  const [{ cart }, dispatch] = useStateValue();
-  const [isCart, setIsCart] = useState(null);
+
   var itemId = 0;
   datas.map((n) => {
     return (itemId = n.id);
@@ -38,12 +37,16 @@ function Product() {
   datas.map((data) => {
     return (category = data.category);
   });
+
+  // useState()
   const [allData, setAllData] = useState(
     data_food_menus.filter((item) => item.category === category)
   );
   const [comment, setComment] = useState(
     data_food_comment.filter((comment) => comment.itemId === itemId)
   );
+
+  // useEffect()
   useEffect(() => {
     setComment(
       data_food_comment.filter((comment) => comment.itemId === itemId)
@@ -53,14 +56,13 @@ function Product() {
     setPriceCart(datas.map((n) => n.price) * quty);
   }, [_product, itemId, category, quty]);
 
-  useEffect(() => {
-    if (isCart != null) {
-      dispatch({
-        type: actionType.SET_CART,
-        cart: isCart,
-      });
-    }
-  }, [isCart]);
+  const [state, dispatch] = useStore();
+  const { carts } = state;
+
+  const handleAddCart = (id) => {
+    dispatch(actions.addCart(datas.find((n) => n.id === id)));
+  };
+
   return (
     <Products
       name={`Name of food: ${datas.map((n) => {
@@ -120,9 +122,7 @@ function Product() {
                         </div>
                         <Button
                           className={"btn_card"}
-                          onClick={() =>
-                            setIsCart(datas.find((n) => n.id === data.id))
-                          }
+                          onClick={() => handleAddCart(data.id)}
                         >
                           Add card
                         </Button>
@@ -208,7 +208,11 @@ function Product() {
               })}
           </div>
 
-          <RelatedDishes allData={allData} category={category} />
+          <RelatedDishes
+            allData={allData}
+            category={category}
+            onClick={() => {}}
+          />
         </div>
       </>
     </Products>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Feedback from "../../components/Feedback";
 import Intro_video_bg from "../../components/Intro_video_bg";
 import Menu_food from "../../components/Menu_food";
@@ -122,7 +122,7 @@ function Homes() {
                           <option value="3">Number of guests 2</option>
                           <option value="4">Number of guests 3</option>
                           <option value="5">Number of guests 4</option>
-                        </select> 
+                        </select>
                     </div>*/}
                     <div className="form-group col-xl-6 col-md-6">
                       <input
@@ -155,7 +155,7 @@ function Homes() {
                           <option value="1">6PM TO 8PM</option>
                           <option value="1">4PM TO 10PM</option>
                           <option value="1">10PM TO 12PM</option>
-                        </select> 
+                        </select>
                     </div>*/}
                   </div>
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Slider from "react-slick";
 import Button from "../Button";
 
-function RelatedDishes({ category, allData }) {
+function RelatedDishes({ category, allData, onClick }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -42,7 +42,7 @@ function RelatedDishes({ category, allData }) {
                   <p>{data.content}</p>
                   <div className="price-add">
                     <h5 className="price">$ {data.price}</h5>
-                    <Button className={"btn_card cart"}>
+                    <Button className={"btn_card cart"} onClick={onClick}>
                       <FontAwesomeIcon icon={faCartArrowDown} />
                     </Button>
                   </div>
