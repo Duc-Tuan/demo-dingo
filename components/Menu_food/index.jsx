@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import * as productsService from "../../services/productsService";
+import * as productsService from "../../Services/productsService";
 
 /* eslint-disable @next/next/no-img-element */
 

@@ -10,7 +10,7 @@ import LayoutDefault from "../layouts/LayoutDefault";
 function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider>
-      <LayoutDefault>
+      <LayoutDefault other={true}>
         <Component {...pageProps} />
       </LayoutDefault>
     </StoreProvider>
