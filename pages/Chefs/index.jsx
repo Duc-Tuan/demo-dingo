@@ -1,12 +1,16 @@
-import LayoutDefault from "../../layouts/LayoutDefault";
-import Chefs from "./Chefs";
+import Teams from "../../components/Teams";
+import Intro_video_bg from "../../components/Intro_video_bg";
+import Banner from "../../components/Banner";
 
-function Chef() {
+function Chefs() {
   return (
-    <LayoutDefault other={true} name="Experienced Chefs">
-      <Chefs />
-    </LayoutDefault>
+    <>
+      <Banner other={true} name="Experienced Chefs"/>
+
+      <Teams />
+      <Intro_video_bg />
+    </>
   );
 }
 
-export default Chef;
+export default Chefs;

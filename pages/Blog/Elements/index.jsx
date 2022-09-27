@@ -2,12 +2,14 @@
 import { faGlobe, faPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import LayoutDefault from "../../../layouts/LayoutDefault";
+import Banner from "../../../components/Banner";
 import { data_food_country, data_food_element } from "../../../public/data";
 
 function Elements() {
   return (
-    <LayoutDefault other={true} name="Elements">
+    <>
+    <Banner other={true} name="Elements"/>
+
       <section className="sample-text-area">
         <div className="container box_1170">
           <h3 className="text-heading">Text Sample</h3>
@@ -774,7 +776,7 @@ function Elements() {
           </div>
         </div>
       </div>
-    </LayoutDefault>
+    </>
   );
 }
 

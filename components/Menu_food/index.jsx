@@ -1,45 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { data_food_menus } from "../../public/data";
+import { useEffect, useState } from "react";
+import * as productsService from "../../services/productsService";
 
 /* eslint-disable @next/next/no-img-element */
-const menuName = [
-  {
-    id: 1,
-    name: "Special",
-    imgSrc:
-      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/play.svg",
-  },
-  {
-    id: 2,
-    name: "Breakfast",
-    imgSrc:
-      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/play.svg",
-  },
-  {
-    id: 3,
-    name: "Launch",
-    imgSrc:
-      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/play.svg",
-  },
-  {
-    id: 4,
-    name: "Dinner",
-    imgSrc:
-      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/play.svg",
-  },
-  {
-    id: 5,
-    name: "Sneaks",
-    imgSrc:
-      "https://raw.githubusercontent.com/Duc-Tuan/img_dingo/411ba9369dc9b5cce3f5609c712534f2107aabfe/icon/play.svg",
-  },
-];
 
 function Menu_food() {
-  const [isMenu, setIsMenu] = useState(
-    data_food_menus.filter((item) => item.category === "Special")
-  );
+  const [dataFeedBack, setDataFeedBack] = useState([]);
+  const [category, dataCategory] = useState();
+  const [isMenu, setIsMenu] = useState();
+
+  useEffect(() => {
+    const fetchApi = async () => {
+      const resultProducts = await productsService.product();
+      productsService.categores().then((category) => dataCategory(category));
+      setDataFeedBack(resultProducts);
+    };
+    fetchApi();
+  }, []);
 
   useEffect(() => {
     {
@@ -55,7 +33,7 @@ function Menu_food() {
   }, [isMenu]);
 
   const setData = (category) => {
-    setIsMenu(data_food_menus.filter((item) => item.category === category));
+    setIsMenu(dataFeedBack.filter((item) => item.category === category));
   };
 
   return (
@@ -76,20 +54,21 @@ function Menu_food() {
                 id="myTab"
                 role="tablist"
               >
-                {menuName.map((data) => {
-                  return (
-                    <a
-                      className={data.name === "Special" ? "active" : ""}
-                      key={data.id}
-                      onClick={(e) => {
-                        setData(data.name);
-                      }}
-                      id="menu_food"
-                    >
-                      {data.name} <img src={data.imgSrc} alt="play" />
-                    </a>
-                  );
-                })}
+                {category &&
+                  category.map((data) => {
+                    return (
+                      <a
+                        className={data.name === "Special" ? "active" : ""}
+                        key={data.id}
+                        onClick={() => {
+                          setData(data.name);
+                        }}
+                        id="menu_food"
+                      >
+                        {data.name} <img src={data.imgSrc} alt="play" />
+                      </a>
+                    );
+                  })}
               </div>
             </div>
 
@@ -102,22 +81,23 @@ function Menu_food() {
                   aria-labelledby="Special-tab"
                 >
                   <div className="food_menu--content">
-                    {isMenu.map((data) => {
-                      return (
-                        <Link href={`/Products/${data.id}`} key={data.id}>
-                          <div className="single_food_item">
-                            <div className="mr-3" style={{ width: "200px" }}>
-                              <img width="100%" src={data.imgSrc} alt="..." />
+                    {isMenu &&
+                      isMenu.map((data) => {
+                        return (
+                          <Link href={`/Products/${data.id}`} key={data.id}>
+                            <div className="single_food_item">
+                              <div className="mr-3" style={{ width: "200px" }}>
+                                <img width="100%" src={data.imgSrc} alt="..." />
+                              </div>
+                              <div className="media-body align-self-center">
+                                <h3>{data.name}</h3>
+                                <p>{data.describe}</p>
+                                <h5>${data.price}</h5>
+                              </div>
                             </div>
-                            <div className="media-body align-self-center">
-                              <h3>{data.name}</h3>
-                              <p>{data.describe}</p>
-                              <h5>${data.price}</h5>
-                            </div>
-                          </div>
-                        </Link>
-                      );
-                    })}
+                          </Link>
+                        );
+                      })}
                   </div>
                 </div>
               </div>

@@ -8,7 +8,7 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Products from ".";
+// import Products from ".";
 import Button from "../../components/Button";
 import RelatedDishes from "../../components/RelatedDishes";
 import {
@@ -64,10 +64,10 @@ function Product() {
   };
 
   return (
-    <Products
-      name={`Name of food: ${datas.map((n) => {
-        return n.name;
-      })}`}
+    <div
+      // name={`Name of food: ${datas.map((n) => {
+      //   return n.name;
+      // })}`}
     >
       <>
         {datas &&
@@ -215,7 +215,7 @@ function Product() {
           />
         </div>
       </>
-    </Products>
+    </div>
   );
 }
 

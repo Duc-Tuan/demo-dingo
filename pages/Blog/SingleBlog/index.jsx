@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import LayoutDefault from "../../../layouts/LayoutDefault";
 import { data_food_comment, data_food_post, data_food_recent_post } from "../../../public/data";
+import Banner from "../../../components/Banner"
 
 function SingleBlog() {
   return (
-    <LayoutDefault other={true} name="Blog Single">
-      <section className="blog_area single-post-area section_padding">
+    <>
+    <Banner other={true} name="Blog Single"/>
+
+    <section className="blog_area single-post-area section_padding">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 posts-list">
@@ -432,7 +434,8 @@ function SingleBlog() {
           </div>
         </div>
       </section>
-    </LayoutDefault>
+    </>
+      
   );
 }
 

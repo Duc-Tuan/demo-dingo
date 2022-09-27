@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Slider from "react-slick";
 import { data_food_comment } from "../../public/data";
 
 function Feedback() {
+
   const settings = {
     dots: true,
     infinite: true,

@@ -1,7 +1,9 @@
-import LayoutDefault from "../../layouts/LayoutDefault";
+import ViewCarts from ".";
 
-function ViewCarts({Children}) {
-    return ( <LayoutDefault other={true} name="Carts">{Children}</LayoutDefault> );
+function ViewCart() {
+    return ( <ViewCarts>
+        All
+    </ViewCarts> );
 }
 
-export default ViewCarts;
+export default ViewCart;

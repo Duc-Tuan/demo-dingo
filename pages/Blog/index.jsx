@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { faLeftLong, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LayoutDefault from "../../layouts/LayoutDefault";
 import ReactPaginate from "react-paginate";
 import {
   data_food_post,
@@ -9,6 +8,7 @@ import {
   data_food_singlw_blog,
 } from "../../public/data";
 import { useEffect, useState } from "react";
+import Banner from "../../components/Banner";
 
 function Blog() {
   const [currentItems, setCurrentItems] = useState(null);
@@ -28,7 +28,9 @@ function Blog() {
     setItemOffset(newOffset);
   };
   return (
-    <LayoutDefault other={true} name="Our Blog">
+    <>
+      <Banner other={true} name="Our Blog" />
+
       <section className="blog_area section_padding">
         <div className="container">
           <div className="row">
@@ -257,7 +259,7 @@ function Blog() {
           </div>
         </div>
       </section>
-    </LayoutDefault>
+    </>
   );
 }
 
