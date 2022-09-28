@@ -7,14 +7,15 @@ import Menu_food from "../components/Menu_food";
 import Teams from "../components/Teams";
 import { data_food_menus } from "../public/data";
 import Banner from "../components/Banner";
+
 function Homes() {
   const [outstanding, setOutstanding] = useState(
     data_food_menus.filter((item) => item.outstanding === "yes")
-  );
-
+    );
+    
   return (
     <>
-    <Banner/>
+      <Banner />
 
       <section className="exclusive_item_part blog_item_section">
         <div className="container">

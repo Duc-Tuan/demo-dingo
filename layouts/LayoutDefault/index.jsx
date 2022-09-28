@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-
 import $ from 'jquery';
 
 function LayoutDefault({ children, other }) {

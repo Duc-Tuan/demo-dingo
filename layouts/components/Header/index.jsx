@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Button from "../../../components/Button";
 import Menu from "../../../components/Menu_navbar";
 import { routers } from "../../../router/index";
@@ -12,7 +12,6 @@ import Cart from "../../../components/Carts";
 import Tippy from "@tippyjs/react/headless";
 
 function Header({ other }) {
-  // const [show, setShow] = useState();
   useEffect(() => {
     const auto = () => {
       $(".main_menu").css("background", "white");
@@ -106,7 +105,7 @@ function Header({ other }) {
                 </Tippy>
                 <div className="menu_btn">
                   <Button hrefs className={"btn_1 d-none d-sm-block"}>
-                    book a tabel
+                    Log in
                   </Button>
                 </div>
               </nav>

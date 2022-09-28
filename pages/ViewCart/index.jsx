@@ -1,9 +1,7 @@
-import ViewCarts from ".";
-
 function ViewCart() {
-    return ( <ViewCarts>
+    return ( <div>
         All
-    </ViewCarts> );
+    </div> );
 }
 
 export default ViewCart;
